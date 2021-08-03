@@ -1,11 +1,15 @@
-import React from 'react'
-import { Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { StackNavigator } from './src/navigation/Navigation';
+import { UserMenuSide } from './src/navigation/UserMenuSide';
 
 const App = () => {
   return (
-    <View>
-      <Text>Hola mundo</Text>
-    </View>
+    <NavigationContainer>
+      <UserMenuSide />
+    </NavigationContainer>
   )
 }
 
