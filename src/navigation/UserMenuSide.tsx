@@ -1,7 +1,8 @@
 import React from 'react';
-
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { StackNavigator } from './Navigation';
+
+import { CalendarMenuScreen } from '../screens/CalendarMenuScreen';
+import { MenuFoodScreen } from '../screens/MenuFoodScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -9,10 +10,11 @@ export const UserMenuSide = () => {
   return (
     <Drawer.Navigator
         screenOptions={{
-            // headerShown: false,
+            headerShown: false,
         }}
     >
-      <Drawer.Screen name="Feed" component={ StackNavigator } />
+      <Drawer.Screen name="StackNavigator" component={ CalendarMenuScreen } />
+      <Drawer.Screen name="MenuFoodScreen" component={ MenuFoodScreen } />
     </Drawer.Navigator>
   );
 }
